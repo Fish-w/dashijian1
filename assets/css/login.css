@@ -1,0 +1,58 @@
+/* 定义整个盒子的整体定位以及大小 */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/login_bg.jpg') no-repeat center;
+    /* 让图片进行放大覆盖整个页面，部分图片可能无法看到 */
+    background-size: cover;
+}
+
+
+/* 定义登录框的大小 */
+
+.loginAndRegBox {
+    width: 400px;
+    height: 310px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* 使用css3属性使登录框移动相比自己定位的50% 使其位置居中 */
+    transform: translate(-50%, -50%);
+}
+
+.boxTop {
+    height: 60px;
+    background: url('../images/login_title.png') no-repeat center;
+}
+
+.reg_box {
+    display: none;
+}
+
+.layui-form {
+    padding: 0 30px;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.layui-form-item {
+    position: relative;
+}
+
+.layui-icon {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.layui-input {
+    padding-left: 32px;
+}
