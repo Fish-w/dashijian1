@@ -37,8 +37,8 @@ $(function() {
         e.preventDefault()
             // 提出参数进行封装，用于优化代码
         var data = {
-                'username': $('#reg_form [name=username]').val(),
-                'password': $('#reg_form [name=password]').val()
+                username: $('#reg_form [name=username]').val(),
+                password: $('#reg_form [name=password]').val()
             }
             // 2.发起Ajax的post请求
         $.post('/api/reguser', data, function(res) {
@@ -51,7 +51,7 @@ $(function() {
             $('#link_login').click()
         })
     })
-    $('#login_form').on('submit', function(e) {
+    $('#login_form').submit(function(e) {
         // 1.组织表单默认事件
         e.preventDefault()
             // 提出参数进行封装，用于优化代码
@@ -67,9 +67,9 @@ $(function() {
                 layer.msg('登录成功')
                     // 登录成功以后，将身份认证的token存贮在本地储存中
                 localStorage.setItem('token', res.token)
-                console.log(res.token);
-                // 跳转到后台页面 修改页面的根路径
-                location.href = 'home.html'
+                    // console.log(res.token);
+                    // 跳转到后台页面 修改页面的根路径
+                location.href = '/home.html'
             }
         })
     })

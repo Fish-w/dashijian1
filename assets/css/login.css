@@ -25,10 +25,16 @@ body {
     transform: translate(-50%, -50%);
 }
 
+
+/* 定义登录页面的大小 */
+
 .boxTop {
     height: 60px;
     background: url('../images/login_title.png') no-repeat center;
 }
+
+
+/* 影藏注册页面 */
 
 .reg_box {
     display: none;
@@ -41,6 +47,7 @@ body {
 .links {
     display: flex;
     justify-content: flex-end;
+    font-size: 12px;
 }
 
 .layui-form-item {
